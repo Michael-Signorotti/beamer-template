@@ -1,0 +1,171 @@
+\documentclass{beamer}
+
+%The following page lists the elements of beamer presentations.
+%http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf
+
+%The following link has a guide on the beamer library.
+%http://mirror.utexas.edu/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdfb
+
+%There are a number of themes from which to select. Please see the following 
+%page for more options.
+%https://mpetroff.net/files/beamer-theme-matrix/
+\usetheme{Berlin}
+
+%Define the colors for use in styling the page elements.
+\definecolor{color-primary}{HTML}{116791}
+\definecolor{color-secondary}{HTML}{6694AB}
+\definecolor{color-accent}{HTML}{DE6E7A}
+
+%Adjust the color of various page elements for the Berlin theme.
+
+%Presentation title
+\setbeamercolor*{palette primary}{fg=white,bg=color-primary}
+%Inner border
+\setbeamercolor*{palette secondary}{fg=white,bg=color-secondary}
+%Outer border
+\setbeamercolor*{palette tertiary}{fg=white,bg=color-primary}
+%Navigation symbols
+\setbeamercolor*{navigation symbols}{fg=color-accent,bg=color-accent}
+
+%Table of contents items
+\setbeamercolor*{section in toc}{fg=color-primary}
+
+%Slide titles and subtitles
+\setbeamercolor*{frametitle}{bg=white,fg=black}
+\setbeamercolor*{framesubtitle}{bg=white,fg=color-primary}
+
+%Color the bullet points
+\setbeamercolor*{item}{bg=white,fg=color-secondary}
+
+%Block items
+\setbeamercolor*{block title}{bg=color-primary,fg=white}
+
+
+%Bibliography items
+\setbeamercolor*{bibliography entry title}{fg=black}
+\setbeamercolor*{bibliography entry author}{fg=black}
+\setbeamercolor*{bibliography entry location}{fg=black}
+\setbeamercolor*{bibliography entry note}{fg=black}
+
+%Remove the bibliography icon next to the entries in the references section, and replace the icons with a label number using \insertbiblabel.
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+%Make the bibliography item number black.
+\setbeamercolor*{bibliography item}{fg=black}
+
+
+
+%The following is information that will be displayed on the title page.
+\title{Presentation Title}
+\author{Author Name}
+\institute{Organization Name}
+\date{May 5, 2018}
+
+%Insert the page number in the lower right hand corner.
+\expandafter\def\expandafter\insertshorttitle\expandafter{\insertshorttitle \hfill\insertframenumber}
+
+\begin{document}
+
+% Slide 1 (Title page)
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Slide 2 (Table of contents)
+\begin{frame}
+\frametitle{Overview}
+\tableofcontents
+\end{frame}
+
+%Slide 3
+\begin{frame}
+\frametitle{Slide Title}
+
+\begin{itemize}
+\item Itemized point one
+\item Itemized point two
+\item IInclude a BibTeX citation here \cite{citation_name}
+\end{itemize}
+\end{frame}
+
+%Start the first section of the presentation.
+\section{Section 1}
+
+%Slide 4
+\begin{frame}
+\frametitle{Slide Title}
+\begin{itemize}
+\item Itemized point one
+\item Itemized point two
+\item Itemized point three
+\end{itemize}
+
+%Add some space between the bullet points and the blocks.
+\vspace{20pt}
+\begin{columns}[T]
+\begin{column}{.45\textwidth}
+\begin{block}{Block 1}
+Content
+\end{block}
+\end{column}
+\hfill%
+\begin{column}{.45\textwidth}
+\begin{block}{Block 2}
+Content
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+%Start the next section of the presentation.
+\section{Section 2}
+
+\begin{frame}
+\frametitle{Slide Title}
+
+\begin{columns}[T]
+\begin{column}{.6\textwidth}
+\begin{itemize}
+\item Itemized point one
+\item Itemized point two
+\item Itemized point three
+\end{itemize}
+\end{column}
+\begin{column}{.4\textwidth}
+\begin{block}{Block 1}
+Content
+\end{block}
+\begin{block}{Block 2}
+Content
+\end{block}
+\begin{block}{Block 3}
+Content
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\section{References}
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\bibliographystyle{plain}
+%Enter the name of the .bib file here
+\bibliography{template_bibliography}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\end{center}
+\begin{center}
+{\Huge Thank You} \\
+\vspace{20pt}
+\textbf{Questions?}\\
+\vspace{10pt}
+\textbf{Email address}
+\end{center}
+\end{frame}
+
+
+\end{document}
