@@ -1,6 +1,6 @@
 # Beamer Presentation Template
 
-This repository includes an example of a Beamer presentation with the following elements and customizations.
+This repository includes an example Beamer presentation with the following elements and customizations.
 
 * [x] Customized presentation colors
 * [x] BibTeX
